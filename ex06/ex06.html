@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira Página com CSS</title>
+
+
+    <style>
+        /* Stylesheet 3: */
+        body {
+            font: 100% Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #sidebar {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            padding-left: 10px;
+        }
+
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #4CAF50;
+        }
+
+        #menulist {
+            padding: 0;
+            position: relative;
+            overflow: auto;
+        }
+
+        .item-menu {
+            width: 165px;
+            float: left;
+            background-color: #555555;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .item-menu:nth-child(3) {
+            background-color: #4CAF50;
+        }
+
+        .item-menu:hover {
+            background-color: #999999;
+        }
+
+        a {
+            color: #000000;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+    </style>
+    <style>
+        /* Stylesheet 4: */
+        body {
+            font: 100% Courier New;
+            margin: 20px;
+            line-height: 26px;
+            background-color: #000000;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #top {
+            color: #84c754;
+            padding: 15px;
+        }
+
+        #main {
+            padding: 10px;
+            color: #84c754;
+        }
+
+        #sidebar {
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 10px;
+            width: 320px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            font-size: 80%;
+            line-height: 20px;
+        }
+
+        #bottom {
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        #top h1,
+        #top p {
+            margin: 0;
+        }
+
+        .item-menu {
+            color: #84c754;
+            cursor: pointer;
+        }
+
+        .item-menu:nth-child(4) {
+            color: white;
+            font-weight: bold;
+        }
+
+        .item-menu:hover {
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="../index.html"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 20px;">Voltar</button></a>
+
+<script>
+        
+        function semEstilo() {
+            document.styleSheets[0].disabled = true;
+            document.styleSheets[1].disabled = true;
+        }
+
+        // função que vai mudar a folha de estilo da página!
+        function estilo03() {
+            semEstilo();
+            document.styleSheets[0].disabled = false;
+        }
+        function estilo04() {
+            semEstilo();
+            document.styleSheets[1].disabled = false;
+        }
+
+
+        estilo01();
+    </script>
+    <!-- html -->
+    <div class="wrapper">
+        <div id="top">
+            <h1>Bem-Vindo à minha página inicial</h1>
+            <p>Use o menu para selecionar diferentes folhas de estilo</p>
+        </div>
+        <div class="wrapper">
+            <div id="menubar">
+                <ul id="menulist">
+
+                    <li onclick="estilo03()" class="item-menu">Folha de estilo 3</li>
+                    <li onclick="estilo04()" class="item-menu">Folha de estilo 4</li>
+                    <li onclick="semEstilo()" class="item-menu">Sem Folha de estilo</li>
+                </ul>
+            </div>
+            
+            <div id="main">
+                <h1>Folhas de estilo diferentes na mesma página</h1>
+                <p>Esta é uma demonstração de como diferentes folhas de estilo podem alterar o layout de sua página
+                    HTML.Você pod alterar o layout desta página selecionando diferentes folhas de estilo no menu ou
+                    selecionando um dos seguintes links<br>
+                    <a onclick="estilo03()" href="#">Folha de estilo 3,</a>
+                    <a onclick="estilo04()" href="#">Folha de estilo 4.</a>
+ 
+                </p>
+                
+                <h2>Sem estilos</h2>
+                <p>Esta página usa elementos DIV para agrupar diferentes seções da página HTML. Clique aqui para ver a
+                    aparência da página sem folha de estilo:
+                    <br>
+                    <a onclick="semEstilo()" href="#">Sem Folha de estilo.</a>
+                </p>
+            </div>
+
+            <div id="sidebar">
+                <h3>Barra Lateral
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet
+                    dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+        </div>
+        <div id="bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt
+            ut laoreet
+            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+            vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+            accumsan et
+            iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+            facilisi.
+        </div>
+    </div>
+</body>
+
+</html>
