@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09 - Senai</title>
+</head>
+<style>
+    input {
+        display: block;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+
+    span {
+        font-size: 13px;
+        font-family:cursive, Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+    }
+    p{
+        margin: 0px;
+    }
+</style>
+<style>
+h2{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+</style>
+<body>
+    <a href="../index.html"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 20px;">Voltar</button></a>
+
+    <div class="titulo">
+    <h2>Atividade 9</h2>
+</div>
+    <div class="questao">
+        <h1>Questão 01:<span> Somar 2 valores <a href="https://www.urionlinejudge.com.br/repository/UOJ_1001.html" target="_blank">link da questão</a></span></h1>
+        <p id="resultado1">Resultado: A soma dos 2 valores é xx.</p>
+        <form action="">
+            <label for="a">A:</label>
+            <input type="text" id="a">
+            <label for="b">B:</label>
+            <input type="text" id="b">
+            <input type="button" onclick="capturar()" value="Calcular">
+        </form>
+        <script>
+            var a, b;
+           function capturar(){ 
+                a = document.getElementById("a").value;
+                b = document.getElementById("b").value;
+                var soma = parseInt(a) + parseInt(b);
+               document.getElementById("resultado1").innerHTML = "Resultado: A soma dos 2 valores é " + soma;
+           }
+        </script>
+    </div>
+    <div class="questao">
+        <h1>Questão 02:<span> Calcular o salário de um funcionário <a href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html" target="_blank">link da questão</a></span></h1>
+        <p id="resultado2">Resultado: O funcionario xxxxxx vai receber xxx.</p>
+        <label for="nomeFunc">Nome Funcionário:</label>
+        <input type="text" id="nomeFunc">
+        <label for="vlrHora">Valor Hora:</label>
+        <input type="text" id="vlrHora">
+        <label for="ttTrab">Total de Horas Trabalhado:</label>
+        <input type="text" id="ttTrab">
+        <input type="button" onclick="capturar2()" value="Calcular">
+        <script>
+            var nome, hora, trabalhado;
+            function capturar2(){
+            nome = document.getElementById("nomeFunc").value;
+            hora = document.getElementById("vlrHora").value;
+            trabalhado = document.getElementById("ttTrab").value;
+            var salario = trabalhado * hora; 
+            document.getElementById("resultado2").innerHTML = "O funcionario "+ nome +" vai receber " + salario +".";
+            }
+
+        </script>
+    </div>
+    <div class="questao">
+        <h1>Questão 03:<span> Calcular o consumo médio de um automóvel <a href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html" target="_blank">link da questão</a></span></h1>
+        <p id="resultado3">Resultado: O automóvel fez o consumo médio de xxx.</p>
+        <label for="dist">Distância percorrida em km:</label>
+        <input type="text" id="dist">
+        <label for="comb">Combustível gasto em R$:</label>
+        <input type="text" id="comb">
+        <input type="button" onclick="capturar3()" value="Calcular">
+        <script>
+            var distancia, combustivel;
+            function capturar3(){
+                distancia = document.getElementById("dist").value;
+                combustivel = document.getElementById("comb").value;
+                var consMedio = distancia / combustivel;
+                document.getElementById("resultado3").innerHTML = "O automóvel fez o consumo médio de " + consMedio + " km/l.";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
