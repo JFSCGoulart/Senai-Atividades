@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Clube de Apostas</title>
+</head>
+
+<body>
+  <a href="../at04.html"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 20px;">Voltar</button></a>
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8">
+        <h1>Clube de Apostas - Peaky Blinders </h1>
+        <p>Escolha entre um dos cavalos pelos respectivos números:</p>
+        <p>(1) "Black", (2) "White", (3) "Orange", (4) "Red", (5) "Blue", (6) "Purple".</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <label for="inCavalo">Nº Cavalo:</label>
+              <input type="text" class="form-control aDireita" 
+                     id="inCavalo" autofocus>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <h5 id="outCavalo"></h5>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <label for="inAposta">Aposta R$:</label>
+              <input type="text" class="form-control aDireita" id="inValor">
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <input type="button" class="btn btn-primary margemSup" 
+                   value="Apostar" id="btApostar">
+            <input type="button" class="btn btn-success margemSup" 
+                   value="Ganhador" id="btGanhador">
+            <input type="button" class="btn btn-danger margemSup" 
+                   value="Novo Páreo" id="btNovo">
+          </div>
+        </div>
+        
+
+        <pre id="outApostas"></pre>
+      </div>
+    </div>
+    <script src="aposta.js"></script>
+</body>
+
+</html>
